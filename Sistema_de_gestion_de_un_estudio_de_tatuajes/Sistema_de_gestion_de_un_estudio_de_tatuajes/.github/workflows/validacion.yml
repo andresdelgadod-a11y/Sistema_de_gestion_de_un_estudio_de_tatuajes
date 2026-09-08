@@ -9,16 +9,19 @@ jobs:
   verificar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Comprobar archivos principales
+      - name: Descargar código del repositorio
+        uses: actions/checkout@v4
+
+      - name: Comprobar que existan todos los archivos principales
         run: |
-          archivos=("index.html" "Disenos.html" "Tatuadores.html" "js/Disenos.js" "js/Tatuadores.js")
+          archivos=("index.html" "Disenos.html" "Tatuadores.html" "Clientes.html" "Citas.html" 
+                    "js/Disenos.js" "js/Tatuadores.js" "js/Clientes.js" "js/Citas.js" 
+                    "css/styles.css")
           for archivo in "${archivos[@]}"; do
-            if [ -f "$archivo" ]; then
-              echo "✅ $archivo existe"
-            else
-              echo "❌ FALTA: $archivo"
+            if [ ! -f "$archivo" ]; then
+              echo "❌ FALTA el archivo: $archivo"
               exit 1
             fi
+            echo "✅ Encontrado: $archivo"
           done
-          echo "✅ Todos los archivos están presentes"
+          echo "✅ TODOS los archivos están presentes"
