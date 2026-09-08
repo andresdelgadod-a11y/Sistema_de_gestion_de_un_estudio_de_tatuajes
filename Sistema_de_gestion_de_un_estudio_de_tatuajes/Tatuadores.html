@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tatuadores - Estudio de Tatuajes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>✍️ Gestión de Tatuadores</h1>
+            <a href="index.html" class="boton-volver">← Volver al Inicio</a>
+        </header>
+
+        <section class="formulario-seccion">
+            <h2 id="titulo-form-tatuador">Agregar Nuevo Tatuador</h2>
+            <form id="form-tatuador">
+                <input type="hidden" id="id-tatuador">
+                
+                <label>Nombre Completo:</label>
+                <input type="text" id="nombre" required placeholder="Nombre del artista">
+
+                <label>Especialidad:</label>
+                <input type="text" id="especialidad" required placeholder="Ej: Realismo, Old School, Geométrico">
+
+                <label>Años de Experiencia:</label>
+                <input type="number" id="experienciaAnios" required min="0">
+
+                <label>Horario Disponible:</label>
+                <input type="text" id="horarioDisponible" required placeholder="Ej: Lunes a Viernes 9:00 - 18:00">
+
+                <button type="submit" class="boton boton-primario">Guardar Tatuador</button>
+                <button type="reset" id="btn-cancelar-tatuador" class="boton boton-secundario" style="display:none;">Cancelar</button>
+            </form>
+        </section>
+
+        <section class="lista-seccion">
+            <h2>Lista de Tatuadores</h2>
+            <div id="lista-tatuadores" class="lista-items"></div>
+        </section>
+    </div>
+    <script src="js/almacen.js"></script>
+    <script src="js/Tatuadores.js"></script>
+</body>
+</html>
