@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Citas - Estudio de Tatuajes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>📅 Gestión de Citas</h1>
+            <a href="index.html" class="boton-volver">← Volver al Inicio</a>
+        </header>
+
+        <section class="formulario-seccion">
+            <h2 id="titulo-form-cita">Agendar Nueva Cita</h2>
+            <form id="form-cita">
+                <input type="hidden" id="id-cita">
+
+                <label>Cliente:</label>
+                <select id="cliente" required>
+                    <option value="">Selecciona un cliente</option>
+                </select>
+
+                <label>Tatuador:</label>
+                <select id="tatuador" required>
+                    <option value="">Selecciona un tatuador</option>
+                </select>
+
+                <label>Diseño (opcional):</label>
+                <select id="diseno">
+                    <option value="">Sin diseño asociado</option>
+                </select>
+
+                <label>Fecha:</label>
+                <input type="date" id="fecha" required>
+
+                <label>Hora:</label>
+                <input type="time" id="hora" required>
+
+                <label>Estado:</label>
+                <select id="estado" required>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Confirmada">Confirmada</option>
+                    <option value="Completada">Completada</option>
+                    <option value="Cancelada">Cancelada</option>
+                </select>
+
+                <label>Notas:</label>
+                <textarea id="notas" rows="3" placeholder="Detalles adicionales de la cita..."></textarea>
+
+                <button type="submit" class="boton boton-primario">Guardar Cita</button>
+                <button type="reset" id="btn-cancelar-cita" class="boton boton-secundario" style="display:none;">Cancelar</button>
+            </form>
+        </section>
+
+        <section class="lista-seccion">
+            <h2>Lista de Citas</h2>
+            <div id="lista-citas" class="lista-items"></div>
+        </section>
+    </div>
+    <script src="js/almacen.js"></script>
+    <script src="js/Citas.js"></script>
+</body>
+</html>

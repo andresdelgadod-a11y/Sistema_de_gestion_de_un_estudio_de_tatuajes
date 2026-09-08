@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Diseños - Estudio de Tatuajes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>🎨 Gestión de Diseños</h1>
+            <a href="index.html" class="boton-volver">← Volver al Inicio</a>
+        </header>
+
+        <section class="formulario-seccion">
+            <h2 id="titulo-form">Agregar Nuevo Diseño</h2>
+            <form id="form-diseno">
+                <input type="hidden" id="id-diseno">
+                
+                <label>Nombre del Diseño:</label>
+                <input type="text" id="nombre" required placeholder="Ej: Dragón estilo japonés">
+
+                <label>Estilo:</label>
+                <input type="text" id="estilo" required placeholder="Ej: Realista, Tradicional, Minimalista">
+
+                <label>Tamaño (cm):</label>
+                <input type="text" id="tamano" required placeholder="Ej: 15x10">
+
+                <label>Precio Base ($):</label>
+                <input type="number" id="precioBase" required min="0" step="1000">
+
+                <label>Descripción:</label>
+                <textarea id="descripcion" rows="3" placeholder="Breve descripción..."></textarea>
+
+                <button type="submit" class="boton boton-primario">Guardar Diseño</button>
+                <button type="reset" id="btn-cancelar" class="boton boton-secundario" style="display:none;">Cancelar</button>
+            </form>
+        </section>
+
+        <section class="lista-seccion">
+            <h2>Lista de Diseños</h2>
+            <div id="lista-disenos" class="lista-items"></div>
+        </section>
+    </div>
+    <script src="js/almacen.js"></script>
+    <script src="js/Disenos.js"></script>
+</body>
+</html>
