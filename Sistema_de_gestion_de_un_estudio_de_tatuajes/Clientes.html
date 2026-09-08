@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Clientes - Estudio de Tatuajes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>👤 Gestión de Clientes</h1>
+            <a href="index.html" class="boton-volver">← Volver al Inicio</a>
+        </header>
+
+        <section class="formulario-seccion">
+            <h2 id="titulo-form-cliente">Agregar Nuevo Cliente</h2>
+            <form id="form-cliente">
+                <input type="hidden" id="id-cliente">
+
+                <label>Nombre Completo:</label>
+                <input type="text" id="nombre" required placeholder="Nombre del cliente">
+
+                <label>Teléfono:</label>
+                <input type="tel" id="telefono" required placeholder="Ej: 3001234567">
+
+                <label>Correo Electrónico:</label>
+                <input type="email" id="correo" required placeholder="cliente@correo.com">
+
+                <label>Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento">
+
+                <label>Notas / Preferencias:</label>
+                <textarea id="notas" rows="3" placeholder="Alergias, estilos favoritos, observaciones..."></textarea>
+
+                <button type="submit" class="boton boton-primario">Guardar Cliente</button>
+                <button type="reset" id="btn-cancelar-cliente" class="boton boton-secundario" style="display:none;">Cancelar</button>
+            </form>
+        </section>
+
+        <section class="lista-seccion">
+            <h2>Lista de Clientes</h2>
+            <div id="lista-clientes" class="lista-items"></div>
+        </section>
+    </div>
+    <script src="js/almacen.js"></script>
+    <script src="js/Clientes.js"></script>
+</body>
+</html>

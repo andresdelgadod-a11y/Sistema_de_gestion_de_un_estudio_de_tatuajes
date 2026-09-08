@@ -6,7 +6,11 @@
 }
 
 body {
-    background: linear-gradient(135deg, #2c1810 0%, #4a2c2a 100%);
+    background: linear-gradient(rgba(44, 24, 16, 0.92), rgba(74, 44, 42, 0.92)), 
+                url('https://images.unsplash.com/photo-1598371812140-9b943a4b4e4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
     color: #f0e6d9;
 }
@@ -180,12 +184,32 @@ form input:focus, form textarea:focus {
     padding: 20px;
 }
 
-body {
-    background: linear-gradient(rgba(44, 24, 16, 0.92), rgba(74, 44, 42, 0.92)), 
-                url('https://images.unsplash.com/photo-1598371812140-9b943a4b4e4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-    color: #f0e6d9;
+.badge-estado {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.estado-pendiente {
+    background: #d4a044;
+    color: #2c1810;
+}
+
+.estado-confirmada {
+    background: #4a90a4;
+    color: #fff;
+}
+
+.estado-completada {
+    background: #4caf6d;
+    color: #fff;
+}
+
+.estado-cancelada {
+    background: #a83232;
+    color: #fff;
 }
